@@ -1,0 +1,29 @@
+# HealthManager
+
+## 概要
+このアプリは、患者と医療者の対話を支援する健康管理ツールです。
+
+## 機能一覧
+- 音声認識による記録
+- Info.plist によるマルチプラットフォーム権限管理
+- SwiftUI によるアクセシブルなUI
+
+## 開発環境
+- Swift 5
+- Xcode 15
+- Cursor (VS Codeベース)
+
+## 今後の予定
+- PermissionsManager の拡張
+- UX改善（行動経済学のフレーム導入）
+
+## PermissionsManager Overview
+- `PermissionsManagerProtocol.swift`: 共通プロトコル定義
+- `PermissionsManager_iOS.swift`: iOS 用の権限管理ロジック
+- `PermissionsManager_macOS.swift`: macOS 用の権限管理ロジック
+
+- [x] Set up Git repository
+- [x] Implement platform-specific PermissionsManager
+- [ ] Add unit tests for PermissionsManager
+- [ ] Integrate with SwiftUI views
+- [ ] Document Info.plist permission keys
