@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // swift-tools-version: 6.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
@@ -23,18 +24,25 @@ let package = Package(
             dependencies: ["tsumurajunichi"]
 
 // swift-tools-version: 6.2.1
+=======
+// swift-tools-version:5.9
+>>>>>>> feature/voice-enhancement
 import PackageDescription
 
 let package = Package(
     name: "QuestMeCore",
     platforms: [
+<<<<<<< HEAD
         .iOS(.v16), .macOS(.v12)
+=======
+        .iOS(.v16)
+>>>>>>> feature/voice-enhancement
     ],
     products: [
         .library(
             name: "QuestMeCore",
             targets: ["QuestMeCore"]
-        ),
+        )
     ],
     targets: [
         .target(
@@ -44,8 +52,12 @@ let package = Package(
         .testTarget(
             name: "QuestMeCoreTests",
             dependencies: ["QuestMeCore"]
+<<<<<<< HEAD
             
              origin/feature/companion-module
         ),
+=======
+        )
+>>>>>>> feature/voice-enhancement
     ]
 )
