@@ -42,7 +42,7 @@ public extension EmotionType {
         case .neutral:       return "ふつう"
         case .happy:         return "うれしい"
         case .sad:           return "かなしい"
-        case .angry:         return "おこってる"
+        case .angry:         return "おこっている"
         case .thinking:      return "かんがえ中"
         case .sexy:          return "セクシー"
         case .encouraging:   return "おうえん"

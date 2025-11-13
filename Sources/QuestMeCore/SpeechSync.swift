@@ -26,6 +26,14 @@ import SwiftUI
 import Combine
 import AVFoundation
 
+#if canImport(UIKit)
+import UIKit
+typealias QMFont = UIFont
+#elseif canImport(AppKit)
+import AppKit
+typealias QMFont = NSFont
+#endif
+
 final class SpeechSync: NSObject, ObservableObject, AVSpeechSynthesizerDelegate, @unchecked Sendable {
     private let voice: VoiceProfile
     private let synthesizer = AVSpeechSynthesizer()
@@ -80,9 +88,8 @@ public struct SpeechSyncView: View {
         let attributed = NSMutableAttributedString(string: text)
         
         if let range = sync.currentRange {
-            attributed.addAttribute(.font,
-                                    value: UIFont.systemFont(ofSize: 24), // 20 * 1.4
-                                    range: range)
+            let font = QMFont.systemFont(ofSize: 24) // iOSならUIFont, macOSならNSFont
+            attributed.addAttribute(.font, value: font, range: range)
         }
         
         return Text(AttributedString(attributed))
