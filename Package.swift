@@ -1,16 +1,16 @@
-// swift-tools-version: 6.2.1
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
     name: "QuestMeCore",
     platforms: [
-        .iOS(.v15), .macOS(.v12)
+        .iOS(.v16)
     ],
     products: [
         .library(
             name: "QuestMeCore",
             targets: ["QuestMeCore"]
-        ),
+        )
     ],
     targets: [
         .target(
@@ -20,6 +20,6 @@ let package = Package(
         .testTarget(
             name: "QuestMeCoreTests",
             dependencies: ["QuestMeCore"]
-        ),
+        )
     ]
 )
